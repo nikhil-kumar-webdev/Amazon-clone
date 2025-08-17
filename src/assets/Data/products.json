@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Headphones",
+    "price": 129.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155228f673"
+  },
+  {
+    "id": 2,
+    "title": "Leather Wallet",
+    "price": 39.99,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1600180758890-6da3b83d0ee1"
+  },
+  {
+    "id": 3,
+    "title": "Smart Watch",
+    "price": 199.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7"
+  },
+  {
+    "id": 4,
+    "title": "Running Shoes",
+    "price": 89.99,
+    "category": "Footwear",
+    "image": "https://images.unsplash.com/photo-1589187155472-cd3f5f3e6b02"
+  },
+  {
+    "id": 5,
+    "title": "Sunglasses",
+    "price": 49.99,
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  },
+  {
+    "id": 6,
+    "title": "Laptop Backpack",
+    "price": 59.99,
+    "category": "Bags",
+    "image": "https://images.unsplash.com/photo-1612832021162-f98260a98654"
+  },
+  {
+    "id": 7,
+    "title": "Coffee Mug",
+    "price": 15.99,
+    "category": "Home",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e17d"
+  },
+  {
+    "id": 8,
+    "title": "Gaming Mouse",
+    "price": 49.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1614289327598-6e7c5c6244b3"
+  },
+  {
+    "id": 9,
+    "title": "Wrist Watch",
+    "price": 109.99,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+  },
+  {
+    "id": 10,
+    "title": "Designer Handbag",
+    "price": 149.99,
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1583001302212-03c9c5c4697a"
+  }
+]

@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <h4 class="text-end">Deals of the Day</h4>
+  <div class="row">
+
+
+      <div class="col-3 ">
+        <div class="card mb-4 ">
+          <img src={{product.thumbnail}} class="card-img-top " alt="Product Image" />
+          <div class="card-body">
+            <hr>
+              <span>
+                <h6 class="card-title"> {{product.title}} </h6>
+              </span>
+              <p class="card-text"> ₹{{product.price}} <span
+              class="text-muted text-decoration-line-through">{{product.discountPercentage}}%</span>
+            </p>
+            <b class="fw-medium"> {{product.category}} </b>
+            <hr>
+              <p class="card-text"> {{product.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+    
+
+
+
+    </div>
+  </div>

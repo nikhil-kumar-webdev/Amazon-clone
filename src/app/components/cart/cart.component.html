@@ -1,0 +1,39 @@
+<ul class="list-unstyled" *ngIf="(cartItems$ | async )?.length; else emptyCart">
+  <div class="row justify-content-center">
+    <li class="list-" *ngFor="let item of cartItems$ | async; index as i" class="col-3  m-auto mt-3 ">
+
+      <div class="border border-1  shadow-sm rounded-3 p-4 ">
+        <img [src]="item.thumbnail" class="card-img-top" alt="Product Image" />
+        <div class="card-body">
+          <span>
+            <p class="card-text mb-1"><strong>Brand:</strong> {{ item.brand }}</p>
+            <h6 class="card-title"> {{item.title}} </h6>
+            <h1> {{item.tag}} </h1>
+          </span>
+          <p class="card-text"> ₹{{item.price}} <span class="text-muted text-decoration-line-through">₹1,499</span>
+          </p>
+          <p>{{item.rating}} <i class="fa-sharp fa-solid fa-star"></i> </p>
+          <hr>
+          <!-- <p class="card-text mb-1"><strong>Description:</strong> {{ item.description }}</p> -->
+
+          <button class="btn btn-sm btn-outline-danger w-100" (click)="removeItem(i)"> Remove</button>
+        </div>
+      </div>
+    </li>
+
+  </div>
+
+</ul>
+
+
+<div class="d-flex  align-items-end flex-column me-5">
+
+  <h3 class="mt-4">Total: ₹{{ getTotal() }}</h3>
+  <button class="btn btn-warning " (click)="clearCart()">Clear Cart</button>
+</div>
+
+<ng-template #emptyCart >
+  <p class="text-center mt-3"><i class="fa-duotone fa-solid fa-trailer"></i> Your cart is empty.</p>
+</ng-template>
+
+

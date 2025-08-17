@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 px-3">
+
+    <div class="d-flex align-items-center me-4">
+
+        <a class="navbar-brand d-flex align-items-center me-2" routerLink="/">
+            <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" height="30"
+                alt="Amazon" /><span class="mb-3 fw-light fs-6"> .in</span>
+        </a>
+
+
+        <div class="text-white d-none d-md-block" style="cursor: pointer;">
+            <div class="small text-white-50">Delivering to Chandigarh 140603 </div>
+            <div class="fw-bold">
+                <i class="fa-solid fa-location-dot"></i> India
+            </div>
+        </div>
+    </div>
+
+    <form class=" d-flex flex-grow-1 me-3" role="search">
+        <select
+            class="form-select form-select-sm w-auto bg-secondary-subtle shadow-none  rounded-0 rounded-start border-end-0">
+            <option selected>All</option>
+            <option>Electronics</option>
+            <option>Books</option>
+            <option>Fashion</option>
+        </select>
+
+        <input class="form-control shadow-none  rounded-0 border-start-0 border-end-0 w-50" type="search"
+            placeholder="Search Amazon" aria-label="Search" />
+
+        <button class="btn btn-warning rounded-0 rounded-end" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+
+
+    <ul style="font-size: 14px;" class=" navbar-nav d-flex flex-row align-items-center gap-3 text-white">
+        <li class="nav-item text-white text-start">
+            <span  *ngIf="userData?.displayName; else signIn">
+                Hello, {{userData.displayName}}
+            </span>
+            <ng-template #signIn>
+                <a class="nav-link p-0 text-white" routerLink="/login">Hello, sign in</a>
+            </ng-template>
+            <a class="nav-link p-0 text-white fw-bold" routerLink="/login">Account & Lists</a>
+        </li>
+
+        <li class="nav-item text-white text-start">
+            <small>Returns</small><br />
+            <a class="nav-link p-0 text-white fw-bold" routerLink="/profile">& Orders</a>
+        </li>
+
+        <li class="nav-item text-white">
+            <a class="nav-link d-flex align-items-center gap-1 text-white" routerLink="/cart">
+                <i class="fas fa-shopping-cart fs-5"></i>
+                <span class="fw-bold">Cart</span>
+                <span class="badge bg-warning text-dark ms-1">1</span>
+            </a>
+        </li>
+    </ul>
+</nav>
