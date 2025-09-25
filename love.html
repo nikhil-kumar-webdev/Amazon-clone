@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      max-width: 450px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: #ff4b5c;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      background: #ff4b5c;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff758f;
+      transform: scale(1.1);
+    }
+
+    .hearts, .flowers {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .heart, .flower {
+      position: absolute;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    .heart { color: #ff4b5c; }
+    .flower { color: #ff9a9e; }
+
+    .quote {
+      font-style: italic;
+      font-size: 1rem;
+      color: #666;
+      margin-top: 1rem;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .quote.show {
+      opacity: 1;
+    }
+
+    .anime-image {
+      margin-top: 1rem;
+      width: 120px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes floatUp {
+      0% {transform: translateY(100vh) scale(0.5); opacity: 1;}
+      100% {transform: translateY(-10vh) scale(1.2); opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey Love ❤️</h1>
+    <p>You make my world brighter every single day. This is just a tiny way to remind you how much I adore you 💕</p>
+    <button onclick="surprise()">Click me 😘</button>
+    <div id="quote" class="quote"></div>
+    <img src="https://th.bing.com/th/id/R.fbca45b8fab447647119a8661fa0b831?rik=mK8ECGKbaheEqw&riu=http%3a%2f%2fwww.zastavki.com%2fpictures%2foriginals%2f2017Nature___Flowers_Beautiful_blue_rose_close-up_116237_.jpg&ehk=9cd8rTCZhBMFkmFJ9b4AeoBRUvepdJhgm7U3Uq3HC%2f8%3d&risl=&pid=ImgRaw&r=0" alt="Anime Love" class="anime-image">
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+  <div class="flowers" id="flowers"></div>
+
+  <script>
+    const quotes = [
+      "You're my today and all of my tomorrows ✨",
+      "Every love story is beautiful, but ours is my favorite 💖",
+      "You’re the best thing I never knew I needed 🌹",
+      "Home is wherever I’m with you 🏡❤️",
+      "Forever is not long enough with you 💕",
+      "Even the stars are jealous of how brightly you shine ✨"
+    ];
+
+    function surprise() {
+      const container = document.getElementById('hearts');
+      const flowerContainer = document.getElementById('flowers');
+
+      for (let i = 0; i < 15; i++) {
+        let heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+        heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        container.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+
+        let flower = document.createElement('div');
+        flower.classList.add('flower');
+        flower.innerHTML = '🌸';
+        flower.style.left = Math.random() * 100 + 'vw';
+        flower.style.fontSize = Math.random() * 20 + 15 + 'px';
+        flower.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        flowerContainer.appendChild(flower);
+        setTimeout(() => flower.remove(), 6000);
+      }
+
+      // Show random love quote
+      const quoteBox = document.getElementById('quote');
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      quoteBox.textContent = randomQuote;
+      quoteBox.classList.add('show');
+    }
+  </script>
+</body>
+</html>
